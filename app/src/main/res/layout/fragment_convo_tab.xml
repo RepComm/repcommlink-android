@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/convotab"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#2E2537"
+    android:paddingTop="10dp"
+    tools:context=".ConvoTab">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="1"
+        android:visibility="visible"
+        app:srcCompat="@android:drawable/sym_action_chat" />
+
+    <View
+        android:id="@+id/vDiv"
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0"
+        android:background="#9C27B0" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_weight="0.2"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="monospace"
+            android:text="Contact Name"
+            android:textAlignment="center"
+            android:textColor="#ABA8B8"
+            android:textSize="15sp" />
+
+        <View
+            android:id="@+id/hDiv"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="#1F0C22" />
+
+        <TextView
+            android:id="@+id/lastMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="0dp"
+            android:background="#2D293C"
+            android:fontFamily="serif-monospace"
+            android:lines="3"
+            android:linksClickable="true"
+            android:maxLines="3"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:text="This is a message body"
+            android:textAlignment="viewStart"
+            android:textColor="#ABA8B8"
+            android:textIsSelectable="true"
+            android:textSize="20sp" />
+    </LinearLayout>
+
+</LinearLayout>
