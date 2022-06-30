@@ -3,9 +3,21 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/jon/Documents/projects/java/RepCommlink/app/src/main/res/drawable-land/Glow.xml" value="0.1735" />
+        <entry key="..\:/Users/jon/Documents/projects/java/RepCommlink/app/src/main/res/drawable/Glow.xml" value="0.1685" />
         <entry key="..\:/Users/jon/Documents/projects/java/RepCommlink/app/src/main/res/drawable/avatar.xml" value="0.123" />
-        <entry key="..\:/Users/jon/Documents/projects/java/RepCommlink/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/jon/Documents/projects/java/RepCommlink/app/src/main/res/layout/fragment_convo_tab.xml" value="0.27743526510480887" />
+        <entry key="..\:/Users/jon/Documents/projects/java/RepCommlink/app/src/main/res/drawable/avatar_mask.xml" value="0.1685" />
+        <entry key="..\:/Users/jon/Documents/projects/java/RepCommlink/app/src/main/res/drawable/border.xml" value="0.1685" />
+        <entry key="..\:/Users/jon/Documents/projects/java/RepCommlink/app/src/main/res/drawable/glow.xml" value="0.1695" />
+        <entry key="..\:/Users/jon/Documents/projects/java/RepCommlink/app/src/main/res/drawable/glowedge.xml" value="0.1685" />
+        <entry key="..\:/Users/jon/Documents/projects/java/RepCommlink/app/src/main/res/drawable/ic_diamond.xml" value="0.1695" />
+        <entry key="..\:/Users/jon/Documents/projects/java/RepCommlink/app/src/main/res/drawable/ic_edgefade.xml" value="0.1605" />
+        <entry key="..\:/Users/jon/Documents/projects/java/RepCommlink/app/src/main/res/drawable/plus.xml" value="0.1695" />
+        <entry key="..\:/Users/jon/Documents/projects/java/RepCommlink/app/src/main/res/font/courierprime.xml" value="0.18958333333333333" />
+        <entry key="..\:/Users/jon/Documents/projects/java/RepCommlink/app/src/main/res/layout/activity_compose.xml" value="0.46987951807228917" />
+        <entry key="..\:/Users/jon/Documents/projects/java/RepCommlink/app/src/main/res/layout/activity_main.xml" value="0.25991561181434597" />
+        <entry key="..\:/Users/jon/Documents/projects/java/RepCommlink/app/src/main/res/layout/activity_messages.xml" value="0.38596491228070173" />
+        <entry key="..\:/Users/jon/Documents/projects/java/RepCommlink/app/src/main/res/layout/fragment_convo_tab.xml" value="0.2716049382716049" />
         <entry key="..\:/Users/jon/Documents/projects/java/RepCommlink/app/src/main/res/layout/sample_convo_tab.xml" value="0.2" />
       </map>
     </option>

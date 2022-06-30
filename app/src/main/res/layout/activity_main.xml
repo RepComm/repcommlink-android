@@ -2,24 +2,64 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/top"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/retro"
     tools:context=".MainActivity">
 
-    <ScrollView
-        android:id="@+id/convoScroll"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:contentDescription="@string/conversations"
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <LinearLayout
-            android:id="@+id/convos"
-            android:layout_width="fill_parent"
+        <ScrollView
+            android:id="@+id/convoScroll"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:contentDescription="@string/conversations"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:id="@+id/convos"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="true"
+                android:orientation="vertical" />
+        </ScrollView>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" />
-    </ScrollView>
+            android:layout_gravity="bottom">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_gravity="right"
+                android:background="@drawable/ic_icon_gear"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <ImageButton
+                android:id="@+id/startConvo"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:background="@drawable/ic_diamond"
+                android:foreground="@drawable/ic_plus"
+                android:onClick="startConvoAction"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                tools:ignore="MissingConstraints,SpeakableTextPresentCheck" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </FrameLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>

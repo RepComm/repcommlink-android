@@ -14,7 +14,6 @@ public class Convo {
   String address;
   
   List<Msg> msgs;
-  Msg lastMsg;
   
   public Convo (String address) {
     this.msgs = new ArrayList();
@@ -35,7 +34,6 @@ public class Convo {
   public void add (Msg msg) {
     this.msgs.add(msg);
     msg.group = this;
-    this.lastMsg = msg;
   }
   
   static void group (Msg msg) {
@@ -49,9 +47,15 @@ public class Convo {
     group.add(msg);
   }
   
-  @RequiresApi(api = Build.VERSION_CODES.N)
-  public void sort () {
-    this.msgs.sort(Comparator.comparingLong((Msg a) -> a.millis));
+//  @RequiresApi(api = Build.VERSION_CODES.N)
+//  public void sort () {
+//    this.msgs.sort((Msg a, Msg b)->{
+//      return Math.toIntExact(b.millis - a.millis);
+//    });
+//  }
+  
+  public Msg getLastMsg () {
+    return this.msgs.get(this.msgs.size()-1);
   }
 }
 

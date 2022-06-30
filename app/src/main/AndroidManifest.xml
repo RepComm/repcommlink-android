@@ -2,6 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="comm.rep.RepCommlink">
+
     <uses-permission android:name="android.permission.SEND_SMS" />
     <uses-permission android:name="android.permission.RECEIVE_SMS" />
     <uses-permission android:name="android.permission.READ_SMS" />
@@ -14,61 +15,65 @@
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/icon"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/icon"
         android:supportsRtl="true"
-        android:theme="@style/Theme.RepCommlink"
+        android:theme="@style/AppTheme"
         tools:targetApi="31">
+        <activity
+            android:name=".Compose"
+            android:exported="false" />
+        <activity
+            android:name=".Messages"
+            android:exported="false" />
 
         <receiver
             android:name=".RCBroadcastReceiver"
-            android:permission="android.permission.BROADCAST_SMS"
-            android:exported="true">
+            android:exported="true"
+            android:permission="android.permission.BROADCAST_SMS">
             <intent-filter>
                 <action android:name="android.provider.Telephony.SMS_DELIVER" />
             </intent-filter>
-        </receiver>
-
-        <!-- BroadcastReceiver that listens for incoming MMS messages -->
+        </receiver> <!-- BroadcastReceiver that listens for incoming MMS messages -->
         <receiver
             android:name=".MmsReceiver"
-            android:permission="android.permission.BROADCAST_WAP_PUSH"
             android:exported="true"
+            android:permission="android.permission.BROADCAST_WAP_PUSH"
             tools:ignore="MissingClass">
             <intent-filter>
                 <action android:name="android.provider.Telephony.WAP_PUSH_DELIVER" />
+
                 <data android:mimeType="application/vnd.wap.mms-message" />
             </intent-filter>
-        </receiver>
-
-        <!-- Activity that allows the user to send new SMS/MMS messages -->
-        <activity android:name=".ComposeSmsActivity"
+        </receiver> <!-- Activity that allows the user to send new SMS/MMS messages -->
+        <activity
+            android:name=".ComposeSmsActivity"
             android:exported="true"
             tools:ignore="MissingClass">
             <intent-filter>
                 <action android:name="android.intent.action.SEND" />
                 <action android:name="android.intent.action.SENDTO" />
+
                 <category android:name="android.intent.category.DEFAULT" />
                 <category android:name="android.intent.category.BROWSABLE" />
+
                 <data android:scheme="sms" />
                 <data android:scheme="smsto" />
                 <data android:scheme="mms" />
                 <data android:scheme="mmsto" />
             </intent-filter>
-        </activity>
-
-        <!-- Service that delivers messages from the phone "quick response" -->
-
+        </activity> <!-- Service that delivers messages from the phone "quick response" -->
         <service
-
             android:name=".HeadlessSmsSendService"
             android:exported="true"
             android:permission="android.permission.SEND_RESPOND_VIA_MESSAGE"
             tools:ignore="MissingClass">
             <intent-filter>
                 <action android:name="android.intent.action.RESPOND_VIA_MESSAGE" />
+
                 <category android:name="android.intent.category.DEFAULT" />
+
                 <data android:scheme="sms" />
                 <data android:scheme="smsto" />
                 <data android:scheme="mms" />

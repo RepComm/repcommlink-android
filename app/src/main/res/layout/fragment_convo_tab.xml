@@ -5,24 +5,31 @@
     android:id="@+id/convotab"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:background="#2E2537"
+    android:background="#80130625"
+    android:paddingLeft="10dp"
     android:paddingTop="10dp"
+    android:paddingRight="1dp"
+    android:paddingBottom="1dp"
     tools:context=".ConvoTab">
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
         android:layout_weight="1"
+        android:adjustViewBounds="true"
+        android:cropToPadding="false"
+        android:scaleType="fitCenter"
         android:visibility="visible"
-        app:srcCompat="@android:drawable/sym_action_chat" />
+        app:srcCompat="@drawable/msg" />
 
     <View
         android:id="@+id/vDiv"
-        android:layout_width="1dp"
+        android:layout_width="4dp"
         android:layout_height="match_parent"
         android:layout_weight="0"
-        android:background="#9C27B0" />
+        android:background="@drawable/edgefade2"
+        android:backgroundTint="@color/dark_hylite_purple"></View>
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -34,7 +41,11 @@
             android:id="@+id/name"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:fontFamily="monospace"
+            android:fontFamily="@font/courierprime"
+            android:shadowColor="@color/lite_glowtext_purple"
+            android:shadowDx="0"
+            android:shadowDy="0"
+            android:shadowRadius="5"
             android:text="Contact Name"
             android:textAlignment="center"
             android:textColor="#ABA8B8"
@@ -43,16 +54,17 @@
         <View
             android:id="@+id/hDiv"
             android:layout_width="match_parent"
-            android:layout_height="2dp"
-            android:background="#1F0C22" />
+            android:layout_height="4dp"
+            android:background="@drawable/edgefade"
+            android:backgroundTint="@color/lite_hylite_purple" />
 
         <TextView
             android:id="@+id/lastMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="0dp"
-            android:background="#2D293C"
-            android:fontFamily="serif-monospace"
+            android:background="@color/darker_purple"
+            android:fontFamily="@font/courierprime"
             android:lines="3"
             android:linksClickable="true"
             android:maxLines="3"
